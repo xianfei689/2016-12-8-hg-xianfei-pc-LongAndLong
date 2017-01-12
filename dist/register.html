@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>久加久</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="lib/reset/normalize.min.css">
+    <link rel="stylesheet" href="lib/reset/reset.min.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <script src="scripts/vendor/modernizr.js"></script>
+</head>
+
+<body>
+    <!--/////top/////start-->
+    <div class="regi_top">
+        <p class="top_p">
+            <img src="images/logo.png" alt="" class="top_img1" onclick="window.location.href='homepage.html'">
+            <a href="#" class="vis_hid findPwd">找回密码</a>
+            <a href="homepage.html" class="backHome" >
+                    返回首页
+                </a>
+            <img src="images/home.png" alt="" class="top_img2">
+        </p>
+    </div>
+    <!--/////top/////end-->
+    <!--/////main/////start-->
+    <div class="findPwd_main">
+        <div class="findct" id="findct">
+            <p class="p1"><span class="sp1">Step 1 填写注册信息</span><span class="sp2">Step 2 激活验证</span><span class="sp3">Step 3 注册成功</span></p>
+            <p class="p2">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+            </p>
+            <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-danger" role="progressbar" data-transitiongoal="25"></div>
+            </div>
+            <div class="step1 vis_none" id="step1">
+                <ul>
+                    <li class="lli1">
+                        <input placeholder="用户名 " type="text" class="email reg_name">
+                    </li>
+                    <!-- @java-see :  如果要显示错误效果注释掉vis_hid -->
+                    <li class="lli2 fontred vis_hid">
+                        请输入6-20位字母、数字、下划线的用户名
+                    </li>
+                    <li class="lli1">
+                        <input placeholder="邮箱号 " type="text" class="email">
+                    </li>
+                    <!-- @java-see :  如果要显示错误效果注释掉vis_hid -->
+                    <li class="lli2 fontred vis_hid">
+                        请输入正确的邮箱号码
+                    </li>
+                    <li class="lli1">
+                        <input placeholder="密码 " type="text" class="email pwd">
+                    </li>
+                    <!-- @java-see :  如果要显示错误效果注释掉vis_hid -->
+                    <li class="lli2 fontred vis_hid">
+                        请输入6-20位字母、数字、下划线的密码
+                    </li>
+                    <li class="lli1">
+                        <input placeholder="确认密码 " type="text" class="email rePwd">
+                    </li>
+                    <!-- @java-see :  如果要显示错误效果注释掉vis_hid -->
+                    <li class="lli2 fontred vis_hid">
+                        两次密码不一致
+                    </li>
+                    <li class="lli3">
+                        <input placeholder="验证码" type="text" class="code input_error">
+                        <img src="images/code1.png" alt="" class="code1">
+                    </li>
+                    <li class="lli4  error_code fontred ">
+                        请输入正确的验证码
+                    </li>
+                    <li class="lli5">
+                        <a class="submit1" id="submit1">提交注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="step2 vis_none" id="step2">
+                <ul>
+                    <li class="lii4  reg_li4">
+                        <img src="images/po.png" alt="" class="po_img">
+                    </li>
+                    <li class="lii1">找回密码链接已经发到您的邮箱 <span id="email_addr">694369359@qq.com</span></li>
+                    <li class="lii2">请在24小时内进入邮箱点击链接找回密码</li>
+                    <li class="lii1 lii3"><i class="circle"></i>收不到邮件？</li>
+                    <li class="lii1">请到您的垃圾邮件或广告邮件目录找找看，或点击 <a href="#" class="sendAgain">重新发送</a></li>
+                    <li class="liiX">如果仍然无法收到邮件，请您更换一个邮箱进行注册</li>
+                    <li class="liiX submit2" id="submit2">进入邮箱查看</li>
+                </ul>
+            </div>
+            <div class="step4 vis_none" id="step3">
+                <ul>
+                    <li class="lii1">
+                        <img src="images/suc.png" alt="" class="lock_img">
+                    </li>
+                    <li class="lii2">恭喜您！</li>
+                    <li class="lii3">您注册账号为：<span>694369359@qq.com</span>，现在进行购物吧！</li>
+                    <li class="lii4"><a href="#" class="vip">进入会员中心</a><a href="#" class="stoll ">先逛逛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--/////main/////end-->
+    <!--/////bottom_service/////start-->
+    <div class="bottom_service">
+        <div class="bt_ct">
+            <ul>
+                <li class="bLi1">
+                    <img src="images/bt1.png" alt="">
+                    <p class="bP1">正品保障</p>
+                    <p class="bP2">正规渠道，正品质量</p>
+                </li>
+                <li class="bLi2">
+                    <img src="images/bt2.png" alt="">
+                    <p class="bP1">提供发票</p>
+                    <p class="bP2">所售商品均有发票</p>
+                </li>
+                <li class="bLi3">
+                    <img src="images/bt3.png" alt="">
+                    <p class="bP1">无忧售后</p>
+                    <p class="bP2">7天无理由退换货</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/////botton_link/////start-->
+    <div class="botton_link">
+        <div class="bt_part1">
+            <dl>
+                <dt>新手上路</dt>
+                <dd>常见问题</dd>
+                <dd>常见问题</dd>
+            </dl>
+            <dl>
+                <dt>购物指南</dt>
+                <dd>订单状态</dd>
+                <dd>购物流程</dd>
+            </dl>
+            <dl>
+                <dt>兑换规则</dt>
+                <dd>兑换规则</dd>
+            </dl>
+            <dl>
+                <dt>物流配送</dt>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd>退换货规则</dd>
+                <dd>争议及说明</dd>
+            </dl>
+            <dl class="dl_last">
+                <dt>关于我们</dt>
+                <dd>关于我们</dd>
+            </dl>
+        </div>
+        <div class="bt_part2">
+            <p>
+                <span>友情链接:</span>
+                <a href="#">商源集团</a>
+                <a href="#" class="br_none">浙江久加久食品饮料有限公司</a>
+            </p>
+        </div>
+    </div>
+    <!--/////botton_link/////end-->
+    <!--/////bt_copy/////end-->
+    <div class="bt_copy">
+        Copyright © 2017 jiujiajiu.cn All Rights Reserved 久加久 版权所有
+    </div>
+    <!--/////bottom_service/////end-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script type="text/javascript">
+    var myAnimate = myAnimate || {};
+    /**
+     * [namespace description]
+     * ##############################################
+     *
+     * @Author                                                                             Copyright    xianfei
+     * @Title                                         ######
+     * @DateTime                                               2016-11-09T17:15:13+0800
+     * @description          模块化处理  对象 myAnimate
+     *
+     * ##############################################
+     * @param       {[type]} ns_string  [description]
+     * @return      {[type]}            [description]
+     */
+    myAnimate.namespace = function(ns_string) {
+        var parts = ns_string.split('.'),
+            parent = myAnimate;
+        if (parts[0] === "myAnimate") {
+            parts = parts.slice(1);
+        }
+        for (var i = 0; i < parts.length; i++) {
+            if (typeof parent[parts[i]] === "undefined") {
+                parent[parts[i]] = {};
+            }
+            parent = parent[parts[i]];
+        }
+        return parent;
+    }
+    myAnimate.namespace("myAnimate.purchase");
+
+    /**
+     * [sortChange description]
+     * ##############################################
+     *
+     * @Author                                                                   Copyright    xianfei
+     * @Title                               ######
+     * @DateTime                                     2016-11-02T15:59:01+0800
+     * @description          一般的效果
+     *
+     * ##############################################
+     * @return      {[type]} [description]
+     */
+    myAnimate.purchase.normalChange = function() {
+        $("#step1").show();
+        $(document).ready(function() {
+            $('.progress .progress-bar').progressbar();
+        });
+        $("#submit1").click(function() {
+            //当校验全部通过的时候 加载进度动画  step1模块隐藏显示step2
+            $(".progress-bar").css("width", "50%");
+            $("#step1").hide();
+            $("#step2").show();
+        })
+        $("#submit2").click(function() {
+            //当校验全部通过的时候 加载进度动画  step1模块隐藏显示step2
+            $(".progress-bar").css("width", "100%");
+            $("#step2").hide();
+            $("#step3").show();
+        })
+
+    }
+
+    myAnimate.purchase.normalChange();
+    </script>
+</body>
+
+</html>

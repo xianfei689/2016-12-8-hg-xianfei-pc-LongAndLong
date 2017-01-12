@@ -109,6 +109,8 @@ textarea:-ms-input-placeholder {
     margin-right: 20px;
     margin-left: 7px;
     color: #757575;
+    display: inline-block;
+    margin-top: 9px;
 }
 
 .head ul .li2 .li2a3 {
