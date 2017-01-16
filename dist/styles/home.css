@@ -230,11 +230,11 @@ textarea:-ms-input-placeholder {
     padding-left: 30px;
     text-align: left;
     border-top: medium none;
-    border-right: #595858 1px solid;
-    border-bottom: #595858 1px solid;
+    border-right: #dedede 1px solid;
+    border-bottom: #dedede 1px solid;
     border-left: medium none;
     background-color: #fff;
-    box-shadow: 4px 4px 5px -1px #595858;
+    box-shadow: 4px 4px 5px -1px #dedede;
     z-index: 9999;
     filter: alpha(opacity=100);
     -moz-opacity: 1;
