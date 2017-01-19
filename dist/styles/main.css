@@ -209,7 +209,7 @@ html {
 
 #allBtn {
   position: absolute;
-  z-index: 99999;
+  z-index: 999;
   left: 0;
   width: 200px;
 }
@@ -705,13 +705,16 @@ html {
 .brand_recommend {
   font-size: 14px;
   width: 100%;
-  height: 428px;
+  min-height: 428px;
   padding-top: 66px;
   text-align: center;
   color: #454545;
   background-image: url("../images/brand/brand_detail.jpg");
   background-repeat: no-repeat;
   background-position: left top;
+  padding-bottom: 36px;
+  background-color: #F5F5F5;
+  overflow: hidden;
 }
 
 .brand_recommend ul {
@@ -727,6 +730,7 @@ html {
   margin-right: 8px;
   padding-top: 12px;
   background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .brand_recommend .b_lin span {

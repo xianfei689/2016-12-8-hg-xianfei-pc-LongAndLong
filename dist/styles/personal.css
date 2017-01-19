@@ -209,7 +209,7 @@ html {
 
 #allBtn {
   position: absolute;
-  z-index: 99999;
+  z-index: 999;
   left: 0;
   width: 200px;
 }

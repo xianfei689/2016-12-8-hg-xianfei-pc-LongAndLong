@@ -8,10 +8,10 @@
     <title>久加久-个人中心-收货地址</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
     <link rel="stylesheet" href="styles/personal.css">
+    <link rel="stylesheet" type="text/css" href="lib/zui/popup/css/popup.css">
     <script src="scripts/vendor/modernizr.js"></script>
 </head>
 
@@ -165,7 +165,7 @@
             <div class="m_right myAddr_main">
                 <img src="images/myCenter/addr_navi1.jpg" alt="" class="addr_banner1">
                 <p class="my_add_p1">
-                    <a href="#" class="add_addr">新增地址</a>
+                    <span  class="add_addr" onclick="addAddress();">新增地址</span>
                     <span>您已创建<em class="font_red">2</em>个收货地址，最多可创建<em class="font_red">20</em>个</span>
                 </p>
                 <p class="my_add_navi2">
@@ -318,9 +318,11 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/city.data-3.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/popup.js"></script>
     <script type="text/javascript">
     ////==============================================
-
+    var addAddress ;
     var myAnimate = myAnimate || {};
     /**
      * [namespace description]
@@ -365,6 +367,42 @@
      */
     myAnimate.purchase.normalChange = function() {
 
+
+            new $.Popup({
+                    type:"alert",
+                    theme:"success",  // theme 对应图片的名字   success
+                    content:"点击弹出点东西111111点击弹出点东西111111点击弹出点东西111111",
+                    confirm:function(){
+                     console.log(11111111)
+                   },
+                 });
+
+
+          addAddress = function addAddress() {
+            var alertAddress = new $.Popup({
+                type: "alertAddress",
+                submit: function() {
+                    var addressData = {
+                        "consigneeName": $("#consigneeName").val().trim(),
+                        "province": $("#provinceDiv").val().trim(),
+                        "city": $("#cityDiv").val().trim(),
+                        "county": $("#countyDiv").val().trim(),
+                        "addressDetail": $("#addressDetail").val().trim(),
+                        "phone": $("#tel").val().trim(),
+                        "homeTel": $("#homeTel").val().trim(),
+                        "postcode": $("#postcode").val().trim(),
+                    }
+
+                    console.log(addressData)
+                        //xxxxxxxxxxxxx @数据处理操作
+
+
+                    //
+                    //     //记得这个要加    关闭弹出框
+                    alertAddress.close()
+                },
+            });
+        }
 
     }
 
