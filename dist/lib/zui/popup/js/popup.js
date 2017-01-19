@@ -30,6 +30,7 @@
                 type: "confirm",
                 theme: "warn",
                 content: "xxx",
+                expressNameArray:[],
                 confirm: function() {},
                 cancel: function() {},
                 timeout: 1000
@@ -56,6 +57,22 @@
                         <p>' + _.opts.content + '</p><br>\
                         <span id="zui-confirm-input"></span><span id="zui-cancel-input"></span>\
                         </div>'
+                var _confirm = $(domBuffer).appendTo($("body"))
+                _.confirm = _confirm
+                _.bindConfirmCallback()
+            } else if (_.opts.type == "setAddress") {
+                var addrArr = _.opts.expressNameArray;
+                var addrOpsStr = "";
+                for(var i=0;i<addrArr.length;i++){
+                        addrOpsStr += '<option value="'+addrArr[i]+'">'+addrArr[i]+'</option>';
+                }
+                domBuffer += '<div class="zui-ui-shade" id="zui-ui-shade"></div><div class="zui-ui-success-confirm  zui-ui-confirm2">\
+                        <p id="zui-ui-tip-title">商城提示</p>\
+                       <p class="zui-ui-express" id="zui-ui-addr-name"><label>快递公司：</label><select id="expressName" class="" >' +addrOpsStr+ '</select></p>\
+                       <p class="zui-ui-express" id="zui-ui-addr-id"><label>货运单号：</label><input type="text" id="expressNumber"></p>\
+                        <span id="zui-confirm-input">确定</span><span id="zui-cancel-input">取消</span>\
+                        </div>'
+
                 var _confirm = $(domBuffer).appendTo($("body"))
                 _.confirm = _confirm
                 _.bindConfirmCallback()
@@ -213,7 +230,7 @@
                                 } else {
                                     //校验全部过  电话 邮编没填
                                     if (homeTel && postcode) {
-                                       // alert("校验全部过  电话 邮编没填")
+                                        // alert("校验全部过  电话 邮编没填")
                                         _.opts.submit()
                                     } else {
                                         //分三种情况  电话填了  邮编填了  都填了

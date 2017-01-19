@@ -8,10 +8,11 @@
     <title>久加久-个人中心-申请退款</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/webui/1.0.0/pc/css/webui.min.css">
     <link rel="stylesheet" href="styles/personal.css">
+    <link rel="stylesheet" type="text/css" href="lib/zui/popup/css/popup.css">
     <script src="scripts/vendor/modernizr.js"></script>
 </head>
 
@@ -189,9 +190,7 @@
                     <br>
                     <span class="ex_d_ct3_p2"> （运费：0.00）</span>
                     </span>
-                    <span class="sr_p4_sp3">
-                           <a href="xxxx" class="" style="width: 85px;display: inline-block;height: 27px;background-color: orange;margin-top: 45px;margin-left: 104px;"></a>
-                     </span>
+                   <span class=" btn_group btn_groupmax0"></span>
                 </p>
                 <p class="sr_p4">
                     <input class="btn_check" type="checkbox">
@@ -206,9 +205,22 @@
                     <br>
                     <span class="ex_d_ct3_p2"> （运费：0.00）</span>
                     </span>
-                    <span class="sr_p4_sp3">
-                           <a href="xxxx" class="" style="width: 85px;display: inline-block;height: 27px;background-color: orange;margin-top: 45px;margin-left: 104px;"></a>
-                     </span>
+                    <span class=" btn_group btn_groupmax1"></span>
+                </p>
+                 <p class="sr_p4">
+                    <input class="btn_check" type="checkbox">
+                    <img src="images/myCenter/ex_d_goods1.png" alt="" class="sr_p4_img1">
+                    <span class="sr_p4_sp1">
+                           <span class="ex_d_ct2_p1">买一送二 洋酒尊万德利肯塔基纯正波本 威士忌700ml 洋酒特价清仓</span>
+                    <br>
+                    <span class="ex_d_ct2_p2">净含量：<em>700ML</em> </span>w
+                    </span>
+                    <span class="sr_p4_sp2">
+                            <span class="ex_d_ct3_p1">￥<em>0.00+ 500</em>积分</span>
+                    <br>
+                    <span class="ex_d_ct3_p2"> （运费：0.00）</span>
+                    </span>
+                    <span class=" btn_group btn_groupmax2"></span>
                 </p>
                 <img src="images/myCenter/re_d_navi2.jpg" alt="" class="sr_d_banner2">
                 <p class="sr_p5">
@@ -230,7 +242,7 @@
                     </textarea>
                 </p>
                 <p class="sr_p7">
-                    <a href="#" class="back_to_list">确定提交</a>
+                    <a class="back_to_list" onclick="commitInfo()">确定提交</a>
                     <a href="#" class="cancel_submit">取消提交</a>
                 </p>
             </div>
@@ -309,9 +321,12 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/city.data-3.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/popup.js"></script>
+     <script type="text/javascript" src="lib/webui/1.0.0/pc/js/webui.min.js"></script>
     <script type="text/javascript">
     ////==============================================
-
+    var commitInfo;
     var myAnimate = myAnimate || {};
     /**
      * [namespace description]
@@ -355,6 +370,19 @@
      * @return      {[type]} [description]
      */
     myAnimate.purchase.normalChange = function() {
+
+        commitInfo = function commitInfo() {
+            new $.Popup({
+                type: "alert",
+                theme: "success", // theme 对应图片的名字   success
+                content: "退款申请提交成功，等待对方审核",
+                confirm: function() {
+                    console.log(11111111)
+                },
+            });
+        }
+
+
         $("#allSelect").unbind().bind("change", function() {
             if ($(this).is(':checked')) {
                 //让按钮选中
@@ -364,6 +392,21 @@
                 $(".sale_return").find(".btn_check").removeAttr("checked");
             }
         })
+
+           var btnLen = $(".sr_p4").length;
+        for (var i = 0; i < btnLen; i++) {
+
+            var btn = $(".btn_groupmax" + i + "").operateBtn({
+                index: i,
+                max: 2,
+                min: 1,
+                default: 0,
+                callback: function(element) {
+                    //xxx
+                }
+            });
+        }
+
 
     }
 

@@ -8,7 +8,7 @@
     <title>久加久-个人中心-我的订单</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
+
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
     <link rel="stylesheet" href="styles/personal.css">
@@ -168,9 +168,9 @@
                     <label for="exchange_id">退款单号</label>
                     <input type="text" id="exchange_id" placeholder="输入商品订单号进行搜索" class="exchange_id">
                     <label for="" class="time">下单时间</label>
-                    <input type="text" id="startTime" placeholder="请选择起始时间范围" class="startTime">
+                    <input name="control_date" type="text" id="startTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择起始时间范围"  class="startTime"/>
                     <span>-</span>
-                    <input type="text" id="endTime" placeholder="请选择结束时间范围" class="endTime">
+                   <input name="control_date" type="text" id="endTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择结束时间范围"  class="startTime"/>
                 </p>
                 <p class="ex_p">
                     <label for="exchange_statue">订单状态</label>
@@ -375,6 +375,7 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="lib/date/Calendar.js"></script>
     <script type="text/javascript">
     ////==============================================
 

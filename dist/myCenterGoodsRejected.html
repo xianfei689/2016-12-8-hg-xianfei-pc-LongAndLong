@@ -8,10 +8,10 @@
     <title>久加久-个人中心-退货管理</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
     <link rel="stylesheet" href="styles/personal.css">
+    <link rel="stylesheet" type="text/css" href="lib/zui/popup/css/popup.css">
     <script src="scripts/vendor/modernizr.js"></script>
 </head>
 
@@ -168,9 +168,9 @@
                     <label for="exchange_id">退货单号</label>
                     <input type="text" id="exchange_id" placeholder="输入商品订单号进行搜索" class="exchange_id">
                     <label for="" class="time">申请退货时间</label>
-                    <input type="text" id="startTime" placeholder="请选择起始时间范围" class="startTime">
+                    <input name="control_date" type="text" id="startTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择起始时间范围" class="startTime" />
                     <span>-</span>
-                    <input type="text" id="endTime" placeholder="请选择结束时间范围" class="endTime">
+                    <input name="control_date" type="text" id="endTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择结束时间范围" class="endTime" />
                 </p>
                 <p class="ex_p">
                     <label for="exchange_statue">退货状态</label>
@@ -198,8 +198,8 @@
                         <span class="ex_pp3">2016-08-26 22:15</span>
                         <span class="ex_pp4">商品功能故障</span>
                         <span class="ex_pp5 font_green">换货成功</span>
-                        <span class="ex_pp6 " onclick="window.location.href='myCenterExchangeGoodsDetail.html'">
-                                <a href="#" class="cur">寄回</a> <a href="myCenterGoodsRejectedDetails.html">详情</a>
+                        <span class="ex_pp6 ">
+                                <a  class="cur" onclick="setAddresss()">寄回</a> <a href="myCenterGoodsRejectedDetails.html">详情</a>
                         </span>
                     </p>
                     <p class="ex_ct">
@@ -367,9 +367,12 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/city.data-3.js"></script>
+    <script type="text/javascript" src="lib/zui/popup/js/popup.js"></script>
+        <script type="text/javascript" src="lib/date/Calendar.js"></script>
     <script type="text/javascript">
     ////==============================================
-
+    var setAddresss;
     var myAnimate = myAnimate || {};
     /**
      * [namespace description]
@@ -415,6 +418,39 @@
     myAnimate.purchase.normalChange = function() {
 
 
+
+
+        /*   var confirmWarn = new $.Popup({
+                            type:"confirm",
+                            theme:"warn",  // theme 对应图片的名字   success
+                            content:"点击弹出点东西111111点击弹出点东西111111点击弹出点东西111111",
+                                confirm:function(){
+                                 alert("点击确认的回调函数")
+                               },
+                               cancel:function(){
+                                    alert("点击取消的回调函数")
+                               }
+                         });*/
+
+        //快递名称需要后端自己到数据xxxxxx
+        var expressArray = ["邮政EMS", "申通快递", "中通速递", "圆通速递", "汇通快递", "顺丰快递", "大田快运", "快马运输", "天天快递"];
+        setAddresss = function setAddresss() {
+            new $.Popup({
+                type: "setAddress",
+                theme: "success", // theme 对应图片的名字   success
+                content: "退款申请提交成功，等待对方审核",
+                //快递公司名称数组
+                expressNameArray: expressArray,
+                confirm: function() {
+                    console.log(1111);
+                },
+                cancel: function() {
+                    console.log(2222);
+                }
+            });
+
+
+        }
     }
 
 

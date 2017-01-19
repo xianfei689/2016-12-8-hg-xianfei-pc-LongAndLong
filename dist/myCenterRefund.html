@@ -8,7 +8,6 @@
     <title>久加久-个人中心-退款管理</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
     <link rel="stylesheet" href="styles/personal.css">
@@ -146,17 +145,17 @@
         <div class="mycenter_cont">
             <div id="myCenter_navi" class="m_left">
                 <ul>
-                   <li class="m_li m_home " >我的主页</li>
-                    <li class="m_li font14 mb7 " >交易管理</li>
+                    <li class="m_li m_home ">我的主页</li>
+                    <li class="m_li font14 mb7 ">交易管理</li>
                     <li class="m_li " onclick="window.location.href='myCenterMyOrder.html'">我的订单</li>
                     <li class="m_li" onclick="window.location.href='myCenterAppraise.html'">我的评价</li>
                     <li class="m_li " onclick="window.location.href='myCenterMyCollect.html'">我的收藏</li>
                     <li class="m_li" onclick="window.location.href='myCenterScore.html'">我的积分</li>
-                    <li class="m_li font14 mb7 mt7 active" >售后服务</li>
+                    <li class="m_li font14 mb7 mt7 active">售后服务</li>
                     <li class="m_li " onclick="window.location.href='myCenterGoodsRejected.html'">退货管理</li>
                     <li class="m_li " onclick="window.location.href='myCenterExchangeGoods.html'">换货管理</li>
                     <li class="m_li font_red" onclick="window.location.href='myCenterRefund.html'">退款管理</li>
-                    <li class="m_li font14 mb7 mt7 " >资料管理</li>
+                    <li class="m_li font14 mb7 mt7 ">资料管理</li>
                     <li class="m_li " onclick="window.location.href='myCenterPersonalInfo.html'">个人资料</li>
                     <li class="m_li " onclick="window.location.href='myCenterChangePwd.html'">修改密码</li>
                     <li class="m_li " onclick="window.location.href='myCenterAddressInfo.html'">收货地址</li>
@@ -168,9 +167,9 @@
                     <label for="exchange_id">退款单号</label>
                     <input type="text" id="exchange_id" placeholder="输入商品订单号进行搜索" class="exchange_id">
                     <label for="" class="time">申请时间</label>
-                    <input type="text" id="startTime" placeholder="请选择起始时间范围" class="startTime">
+                    <input name="control_date" type="text" id="startTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择起始时间范围" class="startTime" />
                     <span>-</span>
-                    <input type="text" id="endTime" placeholder="请选择结束时间范围" class="endTime">
+                    <input name="control_date" type="text" id="endTime" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择结束时间范围" class="endTime" />
                 </p>
                 <p class="ex_p">
                     <label for="exchange_statue">退款状态</label>
@@ -202,7 +201,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" class="cur">确认</a> <a href="myCenterRefundDetails.html">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -211,7 +210,7 @@
                         <span class="re_pp6 font_green">退款成功</span>
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -220,7 +219,7 @@
                         <span class="re_pp6 font_red">拒绝退款</span>
                         <span class="re_pp7"><a href="#" class="cur">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -229,7 +228,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" >修改</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -238,7 +237,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -247,7 +246,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -256,7 +255,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -265,7 +264,7 @@
                         <span class="re_pp6 ">已退款</span>
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
-                     <p class="re_ct">
+                    <p class="re_ct">
                         <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
@@ -275,7 +274,7 @@
                         <span class="re_pp7"><a href="#" class="cur vis_hid">确认</a> <a href="#">详情</a></span>
                     </p>
                     <p class="re_ct bt_none">
-                       <span class="re_pp1">TK2016102701550</span>
+                        <span class="re_pp1">TK2016102701550</span>
                         <span class="re_pp2"><em class="re_pp2_em">2016102701550</em><br><em>￥<i>30.00+100</i>积分</em></span>
                         <span class="re_pp3">2016-08-26 22:15</span>
                         <span class="re_pp4">2016-08-26 22:15</span>
@@ -376,6 +375,7 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/date/Calendar.js"></script>
     <script type="text/javascript">
     ////==============================================
 

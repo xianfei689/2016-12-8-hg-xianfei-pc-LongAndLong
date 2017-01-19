@@ -1712,7 +1712,12 @@ html {
   float: left;
   line-height: 24px;
 }
-
+.sale_return  .btn_group{
+    display: inline-block;
+    width: 105px;
+    margin-top: 44px;
+    margin-left: 95px;
+}
 .sale_return .sr_d_banner2 {
   margin-top: 20px;
   margin-bottom: 20px;

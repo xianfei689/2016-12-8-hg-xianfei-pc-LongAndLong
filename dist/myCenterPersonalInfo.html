@@ -8,19 +8,22 @@
     <title>久加久-个人中心-个人资料</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
     <link rel="stylesheet" href="styles/personal.css">
     <script src="scripts/vendor/modernizr.js"></script>
+    <style>
+    .select_province {
+        width: 90px;
+        height: 30px;
+        text-align: center;
+        border: 1px solid #dedede;
+    }
+
+    </style>
 </head>
 
 <body>
-    <script id="__bs_script__">
-    //<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.5'><\/script>".replace("HOST", location.hostname));
-    //]]>
-    </script>
     <!--/////head/////start-->
     <div class="head">
         <ul>
@@ -151,17 +154,17 @@
         <div class="mycenter_cont">
             <div id="myCenter_navi" class="m_left">
                 <ul>
-                  <li class="m_li m_home " >我的主页</li>
-                    <li class="m_li font14 mb7 " >交易管理</li>
+                    <li class="m_li m_home ">我的主页</li>
+                    <li class="m_li font14 mb7 ">交易管理</li>
                     <li class="m_li " onclick="window.location.href='myCenterMyOrder.html'">我的订单</li>
                     <li class="m_li" onclick="window.location.href='myCenterAppraise.html'">我的评价</li>
                     <li class="m_li " onclick="window.location.href='myCenterMyCollect.html'">我的收藏</li>
                     <li class="m_li" onclick="window.location.href='myCenterScore.html'">我的积分</li>
-                    <li class="m_li font14 mb7 mt7 " >售后服务</li>
+                    <li class="m_li font14 mb7 mt7 ">售后服务</li>
                     <li class="m_li " onclick="window.location.href='myCenterGoodsRejected.html'">退货管理</li>
                     <li class="m_li " onclick="window.location.href='myCenterExchangeGoods.html'">换货管理</li>
                     <li class="m_li" onclick="window.location.href='myCenterRefund.html'">退款管理</li>
-                    <li class="m_li font14 mb7 mt7 active" >资料管理</li>
+                    <li class="m_li font14 mb7 mt7 active">资料管理</li>
                     <li class="m_li font_red" onclick="window.location.href='myCenterPersonalInfo.html'">个人资料</li>
                     <li class="m_li " onclick="window.location.href='myCenterChangePwd.html'">修改密码</li>
                     <li class="m_li " onclick="window.location.href='myCenterAddressInfo.html'">收货地址</li>
@@ -205,12 +208,57 @@
                 <p class="err oldpwd_error ">xxxx!</p>
                 <p>
                     <span class="ch_sp">所在地址：</span>
-                    <input type="password" class="detail_input" id="" placeholder="请再次输入新密码">
+                    <select id="provinceDiv" class="select_province" onchange="loadCity()">
+                        <option>请选择</option>
+                        <option value="北京市">北京市</option>
+                        <option value="上海市">上海市</option>
+                        <option value="天津市">天津市</option>
+                        <option value="重庆">重庆</option>
+                        <option value="河北省">河北省</option>
+                        <option value="山西省">山西省</option>
+                        <option value="河南省">河南省</option>
+                        <option value="辽宁省">辽宁省</option>
+                        <option value="吉林省">吉林省</option>
+                        <option value="黑龙江省">黑龙江省</option>
+                        <option value="内蒙古">内蒙古</option>
+                        <option value="江苏省">江苏省</option>
+                        <option value="山东省">山东省</option>
+                        <option value="安徽省">安徽省</option>
+                        <option value="浙江省">浙江省</option>
+                        <option value="福建省">福建省</option>
+                        <option value="湖北省">湖北省</option>
+                        <option value="湖南省">湖南省</option>
+                        <option value="广东省">广东省</option>
+                        <option value="广西壮族">广西壮族</option>
+                        <option value="江西省">江西省</option>
+                        <option value="四川省">四川省</option>
+                        <option value="海南省">海南省</option>
+                        <option value="贵州省">贵州省</option>
+                        <option value="云南省">云南省</option>
+                        <option value="西藏">西藏</option>
+                        <option value="陕西省">陕西省</option>
+                        <option value="甘肃省">甘肃省</option>
+                        <option value="青海省">青海省</option>
+                        <option value="宁夏">宁夏</option>
+                        <option value="新疆">新疆</option>
+                        <option value="台湾省">台湾省</option>
+                        <option value="香港">香港</option>
+                        <option value="澳门">澳门</option>
+                        <option value="海外">海外</option>
+                    </select>
+                    <select id="cityDiv" class="sele select_province" onchange="loadCounty()">
+                        <option value="0">请选择</option>
+                    </select>
+                    <select id="countyDiv" class="sele select_province">
+                        <option value="0">请选择</option>
+                    </select>
                 </p>
                 <p class="err oldpwd_error ">xxxxx!</p>
                 <p>
                     <span class="ch_sp">出生年月：</span>
-                    <input type="password" class="detail_input" id="" placeholder="请选择出生年月">
+                    <span>
+                        <input name="control_date" type="text" id="control_date" size="10" maxlength="10" onClick="new Calendar(1850,2020).show(this);" readonly="readonly" placeholder="请选择出生时间"  class="detail_input"/>
+                    </span>
                 </p>
                 <p class="err oldpwd_error ">xxxxxx!</p>
                 <p class="ch_submit">
@@ -292,6 +340,8 @@
     </div>
     <!--/////bt_copy/////end-->
     <script src="lib/jquery/jquery.min.js"></script>
+     <script type="text/javascript" src="lib/zui/popup/js/city.data-3.js"></script>
+    <script type="text/javascript" src="lib/date/Calendar.js"></script>
     <script type="text/javascript">
     ////==============================================
 
@@ -309,6 +359,8 @@
      * @param       {[type]} ns_string  [description]
      * @return      {[type]}            [description]
      */
+    // var loadCity;
+    // var loadCounty;
     myAnimate.namespace = function(ns_string) {
         var parts = ns_string.split('.'),
             parent = myAnimate;
@@ -338,7 +390,45 @@
      * @return      {[type]} [description]
      */
     myAnimate.purchase.normalChange = function() {
+               loadCity = function  loadCity(){
+                            $("#cityDiv").find(".city").remove()
+                            var  provinceId = $("#provinceDiv").val().trim()
+                            var cityHtml = ''
+                             cityData3.forEach(function(item) {
 
+                                        if (item.text==provinceId) {
+                                              var citys = item.children
+                                              citys.forEach(function(city){
+                                                         cityHtml += '<option value="'+city.text+'" class="city">'+city.text+'</option>'
+                                              })
+                                              $("#cityDiv").append(cityHtml)
+
+                                        }
+                            });
+
+                }
+
+               loadCounty =  function  loadCounty(){
+                        $("#countyDiv").find(".county").remove()
+                        var  provinceId = $("#provinceDiv").val().trim()
+                        var  cityId = $("#cityDiv").val().trim()
+                        var countyHtml = ''
+                        cityData3.forEach(function(item) {
+                                        if (item.text==provinceId) {
+                                              var citys = item.children
+                                              citys.forEach(function(city){
+                                                        if (city.text==cityId) {
+                                                                    var countys = city.children
+                                                                    countys.forEach(function(county){
+                                                                         countyHtml +='<option value="'+county.text+'" class="county">'+county.text+'</option>'
+                                                                    })
+                                                        }
+                                              })
+                                        }
+                        });
+                        $("#countyDiv").append(countyHtml)
+
+                }
 
     }
 
