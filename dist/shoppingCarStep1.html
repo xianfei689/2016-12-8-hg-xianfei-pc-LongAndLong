@@ -1,0 +1,594 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>久加久-购物车</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="lib/reset/normalize.min.css">
+    <link rel="stylesheet" href="lib/reset/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/webui/1.0.0/pc/css/webui.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/shoppingCar.css">
+    <script src="scripts/vendor/modernizr.js"></script>
+</head>
+
+<body>
+    <!--/////head/////start-->
+    <div class="head">
+        <ul>
+            <li class="li1"><a class="text_underLine">欢迎登录久加久网上商城!</a></li>
+            <li class="li2">
+                <img src="images/icon1.png" alt="">
+                <a href="#" class="li2a1 text_underLine">请登录</a>
+                <a href="#" class="li2a2 text_underLine">注册</a>
+                <a href="#" class="li2a3 text_underLine">我的订单</a>
+                <i>|</i>
+                <a href="#" class="li2a4 text_underLine">我的收藏</a>
+                <a href="#" class="shoppingCar"><span id="goodsNum">0</span></a>
+            </li>
+        </ul>
+        <dl>
+            <dd>
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </dd>
+            <dd class="dd2">
+                <input type="text" name="goodsName" id="goodsName" class="goodsName" placeholder="请输入商品名称搜索">
+                <a href="#" id="search" class="search"></a>
+            </dd>
+        </dl>
+    </div>
+    <!--/////head/////end-->
+    <!--/////long_navi/////start-->
+    <div class="long_navi">
+        <dl class="ddl">
+            <dd class="dd1 ddl_dd" id="allBtn">
+                <ul class="allUL">
+                    <li class="hasPop li1">
+                        <div class="div1">
+                            <span class="Timg Tmove"></span><i class="Tmove">航旅天下</i>
+                        </div>
+                        <ul class="navi_pop">
+                            <dl>
+                                <dd class="dTitle">景点门票景点门票</dd>
+                                <dd class="dBody">
+                                    <i>上海上海</i><i>上海上海上海</i><i>上海</i><i>上海上海上</i><i>上海</i><i>上海</i>
+                                    <i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i>
+                                    <i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i>
+                                    <i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="dTitle">景点门票</dd>
+                                <dd class="dBody">
+                                    <i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd class="dTitle">景点门票1122</dd>
+                                <dd class="dBody">
+                                    <i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i><i>上海</i>
+                                </dd>
+                            </dl>
+                        </ul>
+                    </li>
+                    <li class="hasPop li2">
+                        <div class="div2">
+                            <span class="Timg Tmove"></span><i class="Tmove">家居生活</i>
+                        </div>
+                        <ul class="navi_pop">222
+                        </ul>
+                    </li>
+                    <li class="hasPop li3">
+                        <div class="div3">
+                            <span class="Timg Tmove"></span><i class="Tmove">运动户外</i>
+                        </div>
+                        <ul class="navi_pop">33
+                        </ul>
+                    </li>
+                    <li class="hasPop li4">
+                        <div class="div4">
+                            <span class="Timg Tmove"></span><i class="Tmove">数码3C</i>
+                        </div>
+                        <ul class="navi_pop">44
+                        </ul>
+                    </li>
+                    <li class="hasPop li5">
+                        <div class="div5">
+                            <span class="Timg Tmove"></span><i class="Tmove">贵金属</i>
+                        </div>
+                        <ul class="navi_pop">555
+                        </ul>
+                    </li>
+                    <li class="hasPop li6">
+                        <div class="div6">
+                            <span class="Timg Tmove"></span><i class="Tmove">家用电器</i>
+                        </div>
+                        <ul class="navi_pop">666
+                        </ul>
+                    </li>
+                    <li class=" li7">
+                        <div class="div7">
+                            <span class="Timg Tmove com_none"></span><i class="Tmove"></i>
+                        </div>
+                        <ul class="navi_pop">777
+                        </ul>
+                    </li>
+                    <li class=" li8">
+                        <div class="div8">
+                            <span class="Timg Tmove com_none"></span><i class="Tmove"></i>
+                        </div>
+                        <ul class="navi_pop">888
+                        </ul>
+                    </li>
+                    <li class=" li9">
+                        <div class="div9">
+                            <span class="Timg Tmove com_none"></span><i class="Tmove"></i>
+                        </div>
+                        <ul class="navi_pop">999
+                        </ul>
+                    </li>
+                </ul>
+            </dd>
+            <dd class="dd2 active  ddl_dd">首页</dd>
+            <dd class="dd3 ddl_dd  ddl_hover ">品牌导购</dd>
+            <dd class="dd4 ddl_dd ddl_hover curent">团购专区</dd>
+            <dd class="dd5 ddl_dd  ddl_hover">活动专区</dd>
+        </dl>
+    </div>
+    <!--/////long_navi/////end-->
+    <!--/////shoppingCar_step1/////start-->
+    <div class="shoppingCar_step1">
+        <div class="spc_s1_main">
+            <img src="images/shoppingCar/sp_navi1.jpg" alt="" class="sp_navi1">
+            <p class="spc_sm1_p1">
+                <input id="allSelect" type="checkbox" class="allSelect c_pointer btn_checkAll">
+                <label for="allSelect" class="c_pointer allSel_txt">全选</label>
+            </p>
+            <ul>
+                <li class="shopCont">
+                    <dd class="dd1">
+                        <input type="checkbox" name="" id="" class="btn_check">
+                        <img src="images/shoppingCar/goods1.png" alt="" class="goodsImg">
+                    </dd>
+                    <dd class="dd2 ">
+                        <p class="font-style">菲驰卡芙时尚保温杯VB124-350</p>
+                    </dd>
+                    <dd class="dd3 fontred1">
+                        <span class="price font1">￥<i class="single_price">100.00</i></span>
+                        <br>
+                        <span class="credits font_red"><i class="single_price2">500</i>积分</span>
+                    </dd>
+                    <dd class="dd4">
+                        <div class="btn_groupmax0">
+                        </div>
+                    </dd>
+                    <dd class="dd5  fontred1">
+                        <span class="price font1">￥<i class="count_price">100.00</i></span>
+                        <br>
+                        <i class="credits font_red"><i class="count_price2">500</i>积分</i>
+                    </dd>
+                    <dd class="dd6">
+                        <a class="collect" flag="false">
+                            <img src="images/shoppingCar/uncollect.png" alt=""></a>
+                        <br>
+                        <a class="delete">
+                            <img src="images/shoppingCar/del.png" alt=""></a>
+                    </dd>
+                </li>
+                <li class="shopCont">
+                    <dd class="dd1">
+                        <input type="checkbox" name="" id="" class="btn_check">
+                        <img src="images/shoppingCar/goods1.png" alt="" class="goodsImg">
+                    </dd>
+                    <dd class="dd2 ">
+                        <p class="font-style">菲驰卡芙时尚保温杯VB124-350</p>
+                    </dd>
+                    <dd class="dd3 fontred1">
+                        <span class="price font1">￥<i class="single_price">100.00</i></span>
+                        <br>
+                        <span class="credits font_red"><i class="single_price2">500</i>积分</span>
+                    </dd>
+                    <dd class="dd4">
+                        <div class="btn_groupmax1">
+                        </div>
+                    </dd>
+                    <dd class="dd5  fontred1">
+                        <span class="price font1">￥<i class="count_price">100.00</i></span>
+                        <br>
+                        <i class="credits font_red"><i class="count_price2">500</i>积分</i>
+                    </dd>
+                    <dd class="dd6">
+                        <a class="collect" flag="true">
+                            <img src="images/shoppingCar/collect.png" alt=""></a>
+                        <br>
+                        <a class="delete">
+                            <img src="images/shoppingCar/del.png" alt=""></a>
+                    </dd>
+                </li>
+                <li class="shopCont">
+                    <dd class="dd1">
+                        <input type="checkbox" name="" id="" class="btn_check">
+                        <img src="images/shoppingCar/goods1.png" alt="" class="goodsImg">
+                    </dd>
+                    <dd class="dd2 ">
+                        <p class="font-style">菲驰卡芙时尚保温杯VB124-350</p>
+                    </dd>
+                    <dd class="dd3 fontred1">
+                        <span class="price font1">￥<i class="single_price">100.00</i></span>
+                        <br>
+                        <span class="credits font_red"><i class="single_price2">500</i>积分</span>
+                    </dd>
+                    <dd class="dd4">
+                        <div class="btn_groupmax2">
+                        </div>
+                    </dd>
+                    <dd class="dd5  fontred1">
+                        <span class="price font1">￥<i class="count_price">100.00</i></span>
+                        <br>
+                        <i class="credits font_red"><i class="count_price2">500</i>积分</i>
+                    </dd>
+                    <dd class="dd6">
+                        <a class="collect" flag="false">
+                            <img src="images/shoppingCar/uncollect.png" alt=""></a>
+                        <br>
+                        <a class="delete">
+                            <img src="images/shoppingCar/del.png" alt=""></a>
+                    </dd>
+                </li>
+            </ul>
+            <p class="spc_sm1_p2">
+                <span class="spc_p2_sp1">
+                           <input type="checkbox" name="" id="checkAll2" class="btn_checkAll">
+                           <label for="checkAll2">全选</label>
+                    </span>
+                <span class="spc_p2_sp2" id="deleteSome">删除选中的商品</span>
+                <span class="spc_p2_sp2" id="clearShoppingCar">清空购物车</span>
+                <span class="spc_p2_sp2">继续购物</span>
+                <span class="spc_p2_sp5">商品总价：<i class="font_red">¥<em id="totalMoney">0.00</em></i> + 积分：<i class="font_red"><em id="totalMoney2">0</em>积分</i></span>
+            </p>
+            <p class="spc_sm2_p3">
+                <a href="shoppingcarStep2.html" class="calculate" id="calculate">结   算</a>
+            </p>
+            <p class="spc_sm2_p4">
+            </p>
+        </div>
+    </div>
+    <!--/////shoppingCar_step1/////end-->
+    <!--/////bottom_service/////start-->
+    <div class="bottom_service" style="border-top: 1px solid #dedede;">
+        <div class="bt_ct">
+            <ul>
+                <li class="bLi1">
+                    <img src="images/bt1.png" alt="">
+                    <p class="bP1">正品保障</p>
+                    <p class="bP2">正规渠道，正品质量</p>
+                </li>
+                <li class="bLi2">
+                    <img src="images/bt2.png" alt="">
+                    <p class="bP1">提供发票</p>
+                    <p class="bP2">所售商品均有发票</p>
+                </li>
+                <li class="bLi3">
+                    <img src="images/bt3.png" alt="">
+                    <p class="bP1">无忧售后</p>
+                    <p class="bP2">7天无理由退换货</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/////bottom_service/////end-->
+    <!--/////botton_link/////start-->
+    <div class="botton_link">
+        <div class="bt_part1">
+            <dl>
+                <dt>新手上路</dt>
+                <dd onclick="window.location.href='help.html'">帮助中心</dd>
+                <dd>常见问题</dd>
+            </dl>
+            <dl>
+                <dt>购物指南</dt>
+                <dd>订单状态</dd>
+                <dd>购物流程</dd>
+            </dl>
+            <dl>
+                <dt>兑换规则</dt>
+                <dd>兑换规则</dd>
+            </dl>
+            <dl>
+                <dt>物流配送</dt>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+                <dd>配送说明</dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd>退换货规则</dd>
+                <dd>争议及说明</dd>
+            </dl>
+            <dl class="dl_last">
+                <dt>关于我们</dt>
+                <dd>关于我们</dd>
+            </dl>
+        </div>
+        <div class="bt_part2">
+            <p>
+                <span>友情链接:</span>
+                <a href="#">商源集团</a>
+                <a href="#" class="br_none">浙江久加久食品饮料有限公司</a>
+            </p>
+        </div>
+    </div>
+    <!--/////botton_link/////end-->
+    <!--/////bt_copy/////end-->
+    <div class="bt_copy">
+        Copyright © 2017 jiujiajiu.cn All Rights Reserved 久加久 版权所有
+    </div>
+    <!--/////bt_copy/////end-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/webui/1.0.0/pc/js/webui.min.js"></script>
+    <script type="text/javascript">
+    ////==============================================
+
+    var myAnimate = myAnimate || {};
+    /**
+     * [namespace description]
+     * ##############################################
+     *
+     * @Author                                                                             Copyright    xianfei
+     * @Title                                         ######
+     * @DateTime                                               2016-11-09T17:15:13+0800
+     * @description          模块化处理  对象 myAnimate
+     *
+     * ##############################################
+     * @param       {[type]} ns_string  [description]
+     * @return      {[type]}            [description]
+     */
+    myAnimate.namespace = function(ns_string) {
+        var parts = ns_string.split('.'),
+            parent = myAnimate;
+        if (parts[0] === "myAnimate") {
+            parts = parts.slice(1);
+        }
+        for (var i = 0; i < parts.length; i++) {
+            if (typeof parent[parts[i]] === "undefined") {
+                parent[parts[i]] = {};
+            }
+            parent = parent[parts[i]];
+        }
+        return parent;
+    }
+    myAnimate.namespace("myAnimate.purchase");
+
+    /**
+     * [sortChange description]
+     * ##############################################
+     *
+     * @Author                                                                   Copyright    xianfei
+     * @Title                               ######
+     * @DateTime                                     2016-11-02T15:59:01+0800
+     * @description          一般的效果
+     *
+     * ##############################################
+     * @return      {[type]} [description]
+     */
+    myAnimate.purchase.normalChange = function() {
+         var shade = $('body').AIShade({
+                    style: 'black'
+        });
+
+        /**
+         *
+         * @see   max,min  定义数据  这里需要后端配置下
+         */
+        //@see  购物车 初始化状态
+        //@see   注意这里传入的组件数量应该和购物车里面的商品数量一致!!!!
+        // 这里数量选择按钮  组件  需要后端传入一个数组  [{"min":1;"max":8},{"min":2;"max":5},{"min":3;"max":13}]
+        // @see  遍历对象的时候 注意   数量按钮的名称  btn_groupmax0->btn_groupmax1->btn_groupmax1
+        //示例  json
+        var btnArr = [{
+            "default": 2,
+            "single_price": 103, //单价
+            "score": 101, //积分
+            "min": 2, //最小数量
+            "max": 8 //最大数量
+        }, {
+            "default": 2,
+            "single_price": 204,
+            "score": 102, //积分
+            "min": 2,
+            "max": 5
+        }, {
+            "default": 8,
+            "single_price": 305,
+            "score": 103, //积分
+            "min": 3,
+            "max": 13
+        }];
+        var btnLen = btnArr.length;
+        if (btnLen) {
+            for (var i = 0; i < btnLen; i++) {
+                //遍历按钮的时候对每个商品的初始值定义
+                $(".spc_s1_main").find(".shopCont").eq(i).find(".single_price").text(Number(btnArr[i].single_price).toFixed(2))
+                $(".spc_s1_main").find(".shopCont").eq(i).find(".count_price").text(Number(btnArr[i].single_price * btnArr[i].min).toFixed(2))
+                $(".spc_s1_main").find(".shopCont").eq(i).find(".single_price2").text(Number(btnArr[i].score).toFixed(2))
+                $(".spc_s1_main").find(".shopCont").eq(i).find(".count_price2").text(Number(btnArr[i].score * btnArr[i].min).toFixed(2))
+                var btn = $(".btn_groupmax" + i + "").operateBtn({
+                    index: i,
+                    max: btnArr[i].max,
+                    min: btnArr[i].min,
+                    default: btnArr[i].default,
+                    callback: function(element) {
+                        //改变数量组件值的时候触发  商品价格计算
+                        _deal_goods_amount(Number(element.opts.index), Number(element.getValue()))
+                    }
+                });
+            }
+        }
+
+
+
+        //点击收藏的时候样式效果
+        $(".spc_s1_main").find(".shopCont").each(function() {
+
+            $(this).find(".collect").unbind().bind("click", function() {
+                    if ($(this).attr("flag") == 'true') {
+                        $(this).attr("flag", false)
+                        $(this).find("img").attr("src", "images/shoppingCar/uncollect.png")
+                    } else {
+                        $(this).attr("flag", true)
+                        $(this).find("img").attr("src", "images/shoppingCar/collect.png")
+                    }
+                })
+                //点击删除的效果
+            $(this).find(".delete").unbind().bind("click", function() {
+
+                shade.open()
+                _cur = $(this)
+                $.messager.defaults = {
+                    ok: "是",
+                    cancel: "否"
+                };
+                $.messager.confirm('提示', '你确定要删除当前商品吗？', function(r) {
+                    if (r) {
+                            shade.close()
+                            _cur.parent().parent().hide()
+                            _cur.parent().parent().find(".btn_check").attr("checked", false)
+                        _calculate_total_money()
+                    } else {
+                        shade.close()
+                    }
+                });
+                //xxx
+
+            })
+
+        });
+
+        //全选按钮的逻辑 效果
+        $('.spc_s1_main').find('.btn_check').each(function() {
+            $(this).unbind().bind('click', function() {
+                if ($(this).attr("checked")) {
+                    $(this).attr("checked", false)
+                    _calculate_total_money()
+                } else {
+                    $(this).attr("checked", true)
+                    _calculate_total_money()
+                }
+            })
+        })
+
+        //全选
+        $('body').find('.btn_checkAll').each(function() {
+            $(this).unbind().bind('click', function() {
+                if ($(this).is(':checked')) {
+                    //选中
+                    $('body').find('.btn_checkAll').prop("checked", "checked");
+                    $('.spc_s1_main').find('.btn_check').each(function() {
+                        $(this).prop("checked", "checked");
+                    })
+                    _calculate_total_money()
+                } else {
+                    //没选中
+                    $('body').find('.btn_checkAll').removeAttr("checked");
+                    $('.spc_s1_main').find('.btn_check').each(function(index) {
+                        $(this).removeAttr("checked");
+                    })
+                    _calculate_total_money()
+                }
+            })
+        })
+
+        //改变数量组件值的时候触发
+        var _deal_goods_amount = function(index, multiple) {
+            //
+            var single_price = Number($(".spc_s1_main").find(".shopCont").eq(index).find(".single_price").text().trim())
+            var single_price2 = Number($(".spc_s1_main").find(".shopCont").eq(index).find(".single_price2").text().trim())
+            var count_price = (single_price * multiple).toFixed(2)
+            var count_price2 = (single_price * multiple).toFixed(2)
+            $(".spc_s1_main").find(".shopCont").eq(index).find(".count_price").text(count_price)
+            $(".spc_s1_main").find(".shopCont").eq(index).find(".count_price2").text(count_price2)
+            _calculate_total_money()
+        }
+
+        var _calculate_total_money = function() {
+            var goodsFee = 0;
+
+            $(".spc_s1_main").find(".shopCont").each(function() {
+                // /.is(':checked')
+                if ($(this).find('.btn_check').is(':checked')) {
+                    goodsFee += Number($(this).find('.count_price').text().trim())
+                }
+            })
+            if (goodsFee != 0) {
+                $("#totalMoney").text(goodsFee.toFixed(2))
+            } else {
+                $("#totalMoney").text("0.00")
+            }
+
+        }
+        var _calculate_total_money = function() {
+                var goodsFee = 0;
+                var goodsScore = 0;
+                $(".spc_s1_main").find(".shopCont").each(function() {
+                    // /.is(':checked')
+                    var isShow = $(this).is(":hidden")
+                    if (!isShow&&$(this).find('.btn_check').is(':checked')) {
+                        goodsFee += Number($(this).find('.count_price').text().trim())
+                        goodsScore += Number($(this).find('.count_price2').text().trim())
+                    }
+                })
+                if (goodsFee != 0) {
+                    $("#totalMoney").text(goodsFee.toFixed(2))
+                } else {
+                    $("#totalMoney").text("0.00")
+                }
+                if (goodsScore != 0) {
+                    $("#totalMoney2").text(goodsScore.toFixed(2))
+                } else {
+                    $("#totalMoney2").text("0.00")
+                }
+            }
+            //清空购物车
+        $("#clearShoppingCar").unbind().bind('click', function() {
+            $(".spc_s1_main").find(".shopCont").hide()
+            $(".spc_s1_main").find(".btn_check").attr("checked", false)
+            _calculate_total_money()
+        })
+
+        $("#deleteSome").unbind().bind('click', function() {
+              shade.open()
+                $.messager.defaults = {
+                    ok: "是",
+                    cancel: "否"
+                };
+            $.messager.confirm('提示', '你确定要删除当前商品吗？', function(r) {
+                if (r) {
+                    shade.close()
+                    $(".spc_s1_main").find(".btn_check").each(function(index, element) {
+                        if ($(this).is(':checked')) {
+                            $(this).parent().parent().hide()
+                        }
+                    });
+                    _calculate_total_money()
+                } else {
+                    shade.close()
+                }
+            });
+
+        })
+
+    }
+
+
+    myAnimate.purchase.normalChange();
+    </script>
+</body>
+
+</html>
