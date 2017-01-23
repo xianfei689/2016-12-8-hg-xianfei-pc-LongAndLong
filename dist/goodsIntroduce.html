@@ -10,6 +10,7 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="lib/reset/normalize.min.css">
     <link rel="stylesheet" href="lib/reset/reset.min.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="lib/webui/1.0.0/pc/css/webui.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/goods.css">
@@ -243,7 +244,7 @@
                 <p class="gd_des_p3 font_grey"><em class="gd_desc_em">分类</em><span class="gd_desc_sp1">餐厨用具</span></p>
                 <p class="gd_des_p4 font_grey"><em class="gd_desc_em">品牌</em><span class="gd_desc_sp1">张小泉</span></p>
             </div>
-            <div class="goodsType  goods_comment ">
+            <div class="goodsType  goods_comment  ">
                 <div class="gd_comment_navi">
                     <div class="gd_cet_bar1">
                         <p class="gd_bar1_p1"><em class="comt_score" id="comt_score">4.0</em>分</p>
@@ -263,7 +264,10 @@
                                     <em class="comment_num font_red">(<i id="goodCommentNum">5</i>)</em>
                                     </span>
                         </p>
-                        <p class="gd_bar2_p2"></p>
+                        <!--     <p class="gd_bar2_p2"></p> -->
+                        <div class="progress progress-striped ">
+                            <div id="progressbar1"></div>
+                        </div>
                     </div>
                     <div class="gd_cet_bar2 ml79">
                         <p class="gd_bar2_p1">
@@ -273,7 +277,9 @@
                                     <em class="comment_num font_red">(<i id="normalCommentNum">1</i>)</em>
                                     </span>
                         </p>
-                        <p class="gd_bar2_p2"></p>
+                        <div class="progress progress-striped ">
+                            <div id="progressbar2"></div>
+                        </div>
                     </div>
                     <div class="gd_cet_bar2 ml79">
                         <p class="gd_bar2_p1">
@@ -283,7 +289,9 @@
                                     <em class="comment_num font_grey">(<i id="badCommentNum">0</i>)</em>
                                     </span>
                         </p>
-                        <p class="gd_bar2_p2"></p>
+                        <div class="progress progress-striped ">
+                            <div id="progressbar3"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="gd_comment_main">
@@ -307,6 +315,22 @@
                         <p class="gd_cm_p2 font_grey">2016年06月24日</p>
                     </div>
                 </div>
+
+            <div class="brand_navi">
+        <a href="" class="firstPage disable">首页</a>
+        <a href="" class="prePage disable">上一页</a>
+        <a href="" class="numPage curent">1</a>
+        <a href="" class="numPage">2</a>
+        <a href="" class="numPage">3</a>
+        <a href="" class="numPage">4</a>
+        <a href="" class="numPage">5</a>
+        <a href="" class="numPage">6</a>
+        <a href="" class="numPage">7</a>
+        <a href="" class="border_none">…</a>
+        <a href="" class="prePage">下一页</a>
+        <a href="" class="firstPage">首页</a>
+    </div>
+
             </div>
             <div class="goodsType goods_package ">
                 <p class="gd_des_p1">包装清单</p>
@@ -418,9 +442,14 @@
         </div>
         <!--/////bt_copy/////end-->
         <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <script type="text/javascript" src="lib/webui/1.0.0/pc/js/webui.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui/jquery-ui.js"></script>
         <script type="text/javascript">
         ////==============================================
+
+
+
 
         var myAnimate = myAnimate || {};
         /**
@@ -547,15 +576,27 @@
             //商品的评价分数
             var commentScore = 4.5;
             //好评个数
-            var goodComment = 30;
+            var goodComment = 60;
             //好评个数
-            var normalComment = 20;
+            var normalComment = 12.3;
             //差评个数
-            var badComment = 40;
+            var badComment = 22;
             //总共五个星星
             var allStarNum = 5;
             var fullStarNum = parseInt(commentScore);
+            goodLen = goodComment / (goodComment + normalComment + badComment) * 100;
+            normalLen = normalComment / (goodComment + normalComment + badComment) * 100;
+            badLen = badComment / (goodComment + normalComment + badComment) * 100;
 
+            $("#progressbar1").progressbar({
+                value: goodLen
+            });
+            $("#progressbar2").progressbar({
+                value: normalLen
+            });
+            $("#progressbar3").progressbar({
+                value: badLen
+            });
             //是否有半颗星
             // var halfStar = !(commentScore%1==0);
             var halfStarNum = !(commentScore % 1 == 0) ? (1) : (0);
@@ -577,11 +618,18 @@
                     starHmtl += '<img src="images/goods/star0.png" alt="">';
                 }
             }
+
             $("#comt_score").text(commentScore);
             $("#addStar").html(starHmtl);
             $("#goodCommentNum").text(goodComment);
             $("#normalCommentNum").text(normalComment);
             $("#badCommentNum").text(badComment);
+
+
+
+
+
+
         }
 
 
