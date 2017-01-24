@@ -38,8 +38,14 @@
 
             var domBuffer = ""
             if (_.opts.type == "tip") {
-
-                //
+  domBuffer += '<div class="zui-ui-shade" id="zui-ui-shade"></div><div class="zui-ui-warn-tip  zui-ui-tip">\
+                                                                <p id="zui-ui-tip-title">支付提示</p>\
+                                                                <p>' + _.opts.content + '</p><br>\
+                                                                <span id="zui-confirm-input">支付成功</span>\
+                                                        </div>'
+                var _confirm = $(domBuffer).appendTo($("body"))
+                _.confirm = _confirm
+                _.bindConfirmCallback()
 
             } else if (_.opts.type == "alert") {
                 domBuffer += '<div class="zui-ui-shade" id="zui-ui-shade"></div><div class="zui-ui-warn-tip  zui-ui-tip">\
